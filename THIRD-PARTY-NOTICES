@@ -1,0 +1,32 @@
+VISUAL ANOMALY (VisA) DATASET
+
+SpotDiff
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+The dataset is made available under the Creative Common Attribution 4.0 license.
+See the LICENSE-DATASET file.
+
+Dataset creators: Yang Zou, Jongheon Jeong, Latha Pemula, Dongqing Zhang and
+Onkar Dabeer, Amazon Science (2022).
+
+Source: https://github.com/amazon-science/spot-diff
+Paper: https://arxiv.org/abs/2207.14315
+License: https://creativecommons.org/licenses/by/4.0/
+Pinned source metadata commit: 2a692ab575001cbde74d402d897a7286086c6199
+
+Defect Atlas includes a deterministic subset of 88 VisA photographs from candle
+and pcb1, plus 40 ground-truth annotation masks. Photographs were resized,
+converted to sRGB JPEG and stripped of metadata. Masks were recoloured as
+transparent overlays and resized by nearest neighbour. Source images, labels,
+mask classes and hashes are traced in src/data/dataset-manifest.json. Some
+article/social artwork may contain a resized VisA photograph with a separate
+application diagram; that diagram is not dataset ground truth or an AI heatmap.
+
+The images and annotations remain CC BY 4.0, separate from the MIT license for
+original application code. No endorsement by Amazon or the dataset creators is
+implied. The source data is provided without warranties; see LICENSE-DATASET.
+
+The upstream repository's utility code is separately Apache-2.0 licensed. This
+application does not bundle or execute that utility code. Annotation names are
+derived from its published factual class mapping; upstream metadata remains in
+the private reproduction cache, not the application distribution.

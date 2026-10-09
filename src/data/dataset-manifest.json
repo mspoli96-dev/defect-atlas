@@ -1,0 +1,2355 @@
+{
+  "version": "visa-candle-pcb1-v1",
+  "preparationStatus": "complete",
+  "selectionSeed": "defect-atlas-visa-v1",
+  "source": {
+    "repository": "https://github.com/amazon-science/spot-diff",
+    "commit": "2a692ab575001cbde74d402d897a7286086c6199",
+    "license": "CC-BY-4.0",
+    "attribution": "VisA by Yang Zou, Jongheon Jeong, Latha Pemula, Dongqing Zhang and Onkar Dabeer, Amazon Science (2022).",
+    "archive": {
+      "url": "https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar",
+      "byteLength": 1929840640,
+      "etag": "\"05c830591a1172938cb714895c9e0cfb-113\"",
+      "lastModified": "Thu, 22 Sep 2022 19:23:39 GMT",
+      "categoryOffsets": {
+        "candle": 0,
+        "pcb1": 907116032
+      }
+    },
+    "metadata": {
+      "split_csv/1cls.csv": {
+        "url": "https://raw.githubusercontent.com/amazon-science/spot-diff/2a692ab575001cbde74d402d897a7286086c6199/split_csv/1cls.csv",
+        "sha256": "a48557e6033318cb90556f706196bc9d247a776a23ea51aecee5a80dd0332995"
+      },
+      "utils/id2class.py": {
+        "url": "https://raw.githubusercontent.com/amazon-science/spot-diff/2a692ab575001cbde74d402d897a7286086c6199/utils/id2class.py",
+        "sha256": "4b862131cb8c080f864815fb16ab906165691618fd4734edf35131b759eb25e3"
+      },
+      "LICENSE-DATASET": {
+        "url": "https://raw.githubusercontent.com/amazon-science/spot-diff/2a692ab575001cbde74d402d897a7286086c6199/LICENSE-DATASET",
+        "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+      },
+      "NOTICE": {
+        "url": "https://raw.githubusercontent.com/amazon-science/spot-diff/2a692ab575001cbde74d402d897a7286086c6199/NOTICE",
+        "sha256": "17ac4f8874c43d85d74851568c8adbd4a5624b652ca7c381c81ffb5216582f4a"
+      },
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/amazon-science/spot-diff/2a692ab575001cbde74d402d897a7286086c6199/README.md",
+        "sha256": "803d1a86c80fcdebc63dfabd041f78336c433ca635b735668aadb24bfc124917"
+      }
+    }
+  },
+  "transformations": {
+    "image": "Auto-orient; resize inside 768 x 768 without enlargement; sRGB JPEG, quality 90, 4:4:4; strip metadata.",
+    "annotation": "Original nonzero class pixels recoloured coral with alpha 160; transparent background; nearest-neighbour resize to the processed photograph dimensions. Dataset ground truth, never an AI-generated heatmap."
+  },
+  "samples": [
+    {
+      "id": "da-3e29a6451667",
+      "category": "candle",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-3e29a6451667.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0829.JPG",
+      "sha256": "e8f84a75b5d802f5a25abb04d64cf31dc9ee4fe756e63ecfdbf3d903ac51e179"
+    },
+    {
+      "id": "da-4913a3b71dd1",
+      "category": "candle",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-4913a3b71dd1.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0627.JPG",
+      "sha256": "4f19a793379c1c568f02a0e573c1d205629abb73dfcb4a8761a566ab116ddf87"
+    },
+    {
+      "id": "da-c3d187311d59",
+      "category": "candle",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-c3d187311d59.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0127.JPG",
+      "sha256": "0075ce1e7ea5b0ccaaeab85ca9d52ff79d9355d0cbe9fdb1e2cc230087e43ab3"
+    },
+    {
+      "id": "da-cd1c6ff812a7",
+      "category": "candle",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-cd1c6ff812a7.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0158.JPG",
+      "sha256": "4a452a966b563f7836a4016719ae399597804a117ddd97d9eeefc880d139489e"
+    },
+    {
+      "id": "da-058d10c61b87",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-058d10c61b87.jpg",
+      "annotationSrc": "/dataset/annotations/da-058d10c61b87.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Foreign Particals on Candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/077.JPG",
+      "sha256": "fb6de0be64efc12b5061ed5012a6bd7383b0d6a14a0f0f0b55a7d16f073e7dbe"
+    },
+    {
+      "id": "da-069c55367457",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-069c55367457.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0695.JPG",
+      "sha256": "97463ad0e993d334b4f778a4f8fabdecfe5c37bb2e87c8bf0c8e6cb52860dcaf"
+    },
+    {
+      "id": "da-17288c4804ec",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-17288c4804ec.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0033.JPG",
+      "sha256": "05b5fa5c449e4d12fed6e2fd14c306b8cc128b4689ebc20a050d03ae0df2b441"
+    },
+    {
+      "id": "da-3df862aa162d",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-3df862aa162d.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0358.JPG",
+      "sha256": "7ee17e423a0defe076a5573939bf629a0598f44025bdce34532f89f80fffe79b"
+    },
+    {
+      "id": "da-7dc2af3b7844",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-7dc2af3b7844.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0122.JPG",
+      "sha256": "9f585bb7d2b81ba09d6162e55bfb409055e18c96b678a761ff50116598d1c8a1"
+    },
+    {
+      "id": "da-8c4dfcbd2b32",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-8c4dfcbd2b32.jpg",
+      "annotationSrc": "/dataset/annotations/da-8c4dfcbd2b32.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Foreign Particals on Candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/083.JPG",
+      "sha256": "65c197588efa4c09f5422001a0d39504f6533048be83d00b3026cfe6e0c5ae89"
+    },
+    {
+      "id": "da-942ac782beed",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-942ac782beed.jpg",
+      "annotationSrc": "/dataset/annotations/da-942ac782beed.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/012.JPG",
+      "sha256": "65406f4f2776fe61d2743180deff4ed4e1ff0ff5447b3d1f61bff68634748d8e"
+    },
+    {
+      "id": "da-977d78b66161",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-977d78b66161.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0882.JPG",
+      "sha256": "f63874316d051b5527d961ae358d5d4d7d2ee47a4d52fd6c7213e924d469a6a7"
+    },
+    {
+      "id": "da-9b2905a27296",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-9b2905a27296.jpg",
+      "annotationSrc": "/dataset/annotations/da-9b2905a27296.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "weird candle wick"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/035.JPG",
+      "sha256": "27a35695534d8c9ee8ea8af62b5c5a2d17d620c4fa46d3e9c1cbc1109b730b41"
+    },
+    {
+      "id": "da-a5d0301b31db",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-a5d0301b31db.jpg",
+      "annotationSrc": "/dataset/annotations/da-a5d0301b31db.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/028.JPG",
+      "sha256": "2d7b35ff441e70b157cda6789c2d0aab57c6e8810238c92495ee358062709ba6"
+    },
+    {
+      "id": "da-ad418ab4fa88",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-ad418ab4fa88.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0384.JPG",
+      "sha256": "bb78970173cf4822f8acf334d9899b0ad663c4931b27cafeaa434fddcfebfb40"
+    },
+    {
+      "id": "da-c08025a49e34",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-c08025a49e34.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0356.JPG",
+      "sha256": "f84c2197a4b644e799f04fa829c0819ed5e43c3d73bef7b1ae434faf577ad4fe"
+    },
+    {
+      "id": "da-d1e0a8d8e29f",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-d1e0a8d8e29f.jpg",
+      "annotationSrc": "/dataset/annotations/da-d1e0a8d8e29f.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Wax Melded out of the candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/099.JPG",
+      "sha256": "e38218c53e57994d8c9ecde515f675ca754cfdfbc4d0d546ce653736d12f7a0c"
+    },
+    {
+      "id": "da-d2fcb2b7359c",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-d2fcb2b7359c.jpg",
+      "annotationSrc": "/dataset/annotations/da-d2fcb2b7359c.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/023.JPG",
+      "sha256": "d2680193d7238a66cc58f61c6e10dece543b9bbbd380ecc48fd4f5d5818899ce"
+    },
+    {
+      "id": "da-d94b1af71d66",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-d94b1af71d66.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0559.JPG",
+      "sha256": "19bfa072fe1d35750c47eef22511a14399f62c141cafb4eda8293885b95aadf7"
+    },
+    {
+      "id": "da-fe0132e83cec",
+      "category": "candle",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-fe0132e83cec.jpg",
+      "annotationSrc": "/dataset/annotations/da-fe0132e83cec.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Extra Wax in Candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/062.JPG",
+      "sha256": "27eaa635c6a84640ab4d153529bba403495714e16a78deebc484433d5fd36ce8"
+    },
+    {
+      "id": "da-04d46e9f09c3",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-04d46e9f09c3.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0228.JPG",
+      "sha256": "473b00fbf91251fadca34ccaaec2b4d88bf176f1e4776a962953815d4950509b"
+    },
+    {
+      "id": "da-0ed8242d0380",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-0ed8242d0380.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0729.JPG",
+      "sha256": "0eaaf609db3512f428ca7742ca5bb4d680182696e8cb58d4627c175560c121d0"
+    },
+    {
+      "id": "da-1a96358aec83",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-1a96358aec83.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0313.JPG",
+      "sha256": "88fdfcfdfb1ccc172e26adc74394efffd0228c3ead192f3bb2927cd67b2df87d"
+    },
+    {
+      "id": "da-1d2d604078fa",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-1d2d604078fa.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0871.JPG",
+      "sha256": "9b23a04a0b2709618f466d7d80ae4f88fc205ff7bc7d76cf096b04476575c24b"
+    },
+    {
+      "id": "da-1f6a4aa94058",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-1f6a4aa94058.jpg",
+      "annotationSrc": "/dataset/annotations/da-1f6a4aa94058.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Wax Melded out of the candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/095.JPG",
+      "sha256": "982853830ce4e858073e2901b6995a9eb4c31c52298e68e10f9bc6b6d4437363"
+    },
+    {
+      "id": "da-2dbdf7ab9b07",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-2dbdf7ab9b07.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0842.JPG",
+      "sha256": "cc593d76db22f7a059ca5862cfc02358b9da6b0a689745aca466eec04d7f23ae"
+    },
+    {
+      "id": "da-432effea482e",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-432effea482e.jpg",
+      "annotationSrc": "/dataset/annotations/da-432effea482e.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/010.JPG",
+      "sha256": "e1df5993a96654e1d9a9e5ebc316e8183a836d922358c518e35367ad7ddf10ae"
+    },
+    {
+      "id": "da-491324b17422",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-491324b17422.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0530.JPG",
+      "sha256": "e6980f2fef3f6dd3e55bd8f9f27115171ef36bca272d6d1f78eece46f6ce23e9"
+    },
+    {
+      "id": "da-51fa1721f706",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-51fa1721f706.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0768.JPG",
+      "sha256": "10d5c465b83a967db743785be5b4ad109e5beb37dff4d9abe3f37759f25b7dd6"
+    },
+    {
+      "id": "da-6e615b957b1b",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-6e615b957b1b.jpg",
+      "annotationSrc": "/dataset/annotations/da-6e615b957b1b.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Wax Melded out of the candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/088.JPG",
+      "sha256": "7c546d74bf2ac2a78b6a2e4aaa2c68a5841db9f24a16a441641a1b00f0b5b41d"
+    },
+    {
+      "id": "da-72c399382388",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-72c399382388.jpg",
+      "annotationSrc": "/dataset/annotations/da-72c399382388.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Different Colour Spot"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/049.JPG",
+      "sha256": "ceac125303e78a8cf82f75468a9ad31644b18c3d5f6d37381cab840bda12ea77"
+    },
+    {
+      "id": "da-75f790acc716",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-75f790acc716.jpg",
+      "annotationSrc": "/dataset/annotations/da-75f790acc716.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Chunk Of Wax Missing"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/009.JPG",
+      "sha256": "aa036f06cfd96167869f865abb328410d263b4e66b4b32af93c04783f44de696"
+    },
+    {
+      "id": "da-7d5d538cbb67",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-7d5d538cbb67.jpg",
+      "annotationSrc": "/dataset/annotations/da-7d5d538cbb67.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Extra Wax in Candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/060.JPG",
+      "sha256": "4fff709500016bc4c05bf4808433bae27778d2503311b439c4bd89428d51f9e4"
+    },
+    {
+      "id": "da-839e732f91cf",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-839e732f91cf.jpg",
+      "annotationSrc": "/dataset/annotations/da-839e732f91cf.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Extra Wax in Candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/068.JPG",
+      "sha256": "10242a5347fb672f142216eb0c72434e51b00254ade2ab0d6fd586fe174e0b80"
+    },
+    {
+      "id": "da-85697cadd5eb",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-85697cadd5eb.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0079.JPG",
+      "sha256": "91b0f6dd5097622ab25a9b5d57b2c24bc4aaf7e5b0f2c2ba0c1da71300d1f5f5"
+    },
+    {
+      "id": "da-8f11e6da80d9",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-8f11e6da80d9.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0706.JPG",
+      "sha256": "ad62fc01bc9f74a8193deabf5ef33b98769ad8fda7c04a2e2735064df32f8b57"
+    },
+    {
+      "id": "da-9da7314b993e",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-9da7314b993e.jpg",
+      "annotationSrc": "/dataset/annotations/da-9da7314b993e.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Different Colour Spot"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/048.JPG",
+      "sha256": "d82cd3d16377abc634e5599d09f60fe436eb29e9a1b3cc038e01682fd0d96e43"
+    },
+    {
+      "id": "da-a9c5284e59ee",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-a9c5284e59ee.jpg",
+      "annotationSrc": "/dataset/annotations/da-a9c5284e59ee.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/016.JPG",
+      "sha256": "869bd220a3b164cda5663d43d5e4e463b923ff620f357947925b9810437436a6"
+    },
+    {
+      "id": "da-b31ae058b8f3",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-b31ae058b8f3.jpg",
+      "annotationSrc": "/dataset/annotations/da-b31ae058b8f3.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "weird candle wick"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/031.JPG",
+      "sha256": "6a68c2cd7f40b208d0ee606ebe61ba337b4b2e19cc105c5e8cc29b2ddc8b3619"
+    },
+    {
+      "id": "da-ce40cc7250c9",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-ce40cc7250c9.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0428.JPG",
+      "sha256": "27351cae03856cd1b094e487056cefd7d0efd3d0d05fbc901dd5376ac3133d33"
+    },
+    {
+      "id": "da-d10413cbcd72",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-d10413cbcd72.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0116.JPG",
+      "sha256": "db7a890ff24f278c6375d86e608e9da35a991b653b58c9bac3ab8fad5dbce8a4"
+    },
+    {
+      "id": "da-d70db114fd92",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-d70db114fd92.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Normal/0511.JPG",
+      "sha256": "efe3aebffbc1502b4ff9526300405bb2b98fb20500fcb6dc9a317e17160f23ff"
+    },
+    {
+      "id": "da-e66bb8cd00f4",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-e66bb8cd00f4.jpg",
+      "annotationSrc": "/dataset/annotations/da-e66bb8cd00f4.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Wax Melded out of the candle"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/094.JPG",
+      "sha256": "283b8d19c7bc79e41bad9dc798277fdf9426a5187cae30cbb8759c11d58e1377"
+    },
+    {
+      "id": "da-ed96819a459d",
+      "category": "candle",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-ed96819a459d.jpg",
+      "annotationSrc": "/dataset/annotations/da-ed96819a459d.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Damaged Corner of Packaging"
+      ],
+      "width": 768,
+      "height": 699,
+      "sourcePath": "candle/Data/Images/Anomaly/027.JPG",
+      "sha256": "8e6af3da5c41d2b8ea97143c7e77fa67acaa516f76db8156cb7779c963738181"
+    },
+    {
+      "id": "da-111aa7e65859",
+      "category": "pcb1",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-111aa7e65859.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0059.JPG",
+      "sha256": "6a9c181e41d6374679c257d35076bf63feab63f0ea838a1f586f89cca4dccb52"
+    },
+    {
+      "id": "da-12df1c152210",
+      "category": "pcb1",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-12df1c152210.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0321.JPG",
+      "sha256": "ed1365faa1aea78128026d052c6bb20ba40c0512684507a592d2a2fc80113e3c"
+    },
+    {
+      "id": "da-1ff7bd5a2f22",
+      "category": "pcb1",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-1ff7bd5a2f22.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0183.JPG",
+      "sha256": "e63f049ff995f7af8ab82b4035fe3482b964167e5b3b256407f8cc083be15bf8"
+    },
+    {
+      "id": "da-6bd4123152dd",
+      "category": "pcb1",
+      "split": "reference",
+      "imageSrc": "/dataset/images/da-6bd4123152dd.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0323.JPG",
+      "sha256": "9abe5ce37319a5bcbeb2eb434e123b9f4ef88b7fcc41fb1c3229eb1ba9f079f6"
+    },
+    {
+      "id": "da-1bf7423cc1f3",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-1bf7423cc1f3.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0657.JPG",
+      "sha256": "2c2f80059e3163dbc259465c731d016a16204d5a08ebbb5cd46620c6f3312246"
+    },
+    {
+      "id": "da-36bf7a7c89f0",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-36bf7a7c89f0.jpg",
+      "annotationSrc": "/dataset/annotations/da-36bf7a7c89f0.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Missing"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/048.JPG",
+      "sha256": "73e18f1020ff3e72c417280c167f26e2a2f94d8da1576bf07615f44f20650ca2"
+    },
+    {
+      "id": "da-3ac07665faec",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-3ac07665faec.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0918.JPG",
+      "sha256": "0f96c134dd19c866a0e76636ab2045c43227f869d43974b6f33a8136f01bc052"
+    },
+    {
+      "id": "da-4547c74ead45",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-4547c74ead45.jpg",
+      "annotationSrc": "/dataset/annotations/da-4547c74ead45.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/085.JPG",
+      "sha256": "17f4d91a885015ed72b34a5d48b9ee8158284b51e8d475e121ac6cf7209531c9"
+    },
+    {
+      "id": "da-63dd5daf2c4f",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-63dd5daf2c4f.jpg",
+      "annotationSrc": "/dataset/annotations/da-63dd5daf2c4f.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/018.JPG",
+      "sha256": "472afe390d79eb5a6da559f42f02225ae0989e07b059679d7a477ace73438801"
+    },
+    {
+      "id": "da-6886e279c1fe",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-6886e279c1fe.jpg",
+      "annotationSrc": "/dataset/annotations/da-6886e279c1fe.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/073.JPG",
+      "sha256": "70034ec3667757b14e4d05a4945fd758d578453f386a18f90bd474725f7d9ea6"
+    },
+    {
+      "id": "da-6deded9403be",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-6deded9403be.jpg",
+      "annotationSrc": "/dataset/annotations/da-6deded9403be.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/095.JPG",
+      "sha256": "5c88ecd03ea7b4ab765d345748587b9ddee67c20a6c0a3d1a1cf4cb7bc12fd72"
+    },
+    {
+      "id": "da-7550b73a0061",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-7550b73a0061.jpg",
+      "annotationSrc": "/dataset/annotations/da-7550b73a0061.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Missing"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/057.JPG",
+      "sha256": "64cfeaa67af2e51bf99636b8efabc9828bc43ac45d42f4a1e7be25e0c374b451"
+    },
+    {
+      "id": "da-78daa92f0ce9",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-78daa92f0ce9.jpg",
+      "annotationSrc": "/dataset/annotations/da-78daa92f0ce9.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/066.JPG",
+      "sha256": "79e083753b3b23fbd24fd3fbb49b6dab4503d845c7c9bbeb80db03fddf004ff6"
+    },
+    {
+      "id": "da-7a497d97fe8d",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-7a497d97fe8d.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0851.JPG",
+      "sha256": "242c4a9bce89e45ff4aeec190a7de9ac93470976c3257a2afbe14002bbec7b20"
+    },
+    {
+      "id": "da-9376aeb2a043",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-9376aeb2a043.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0813.JPG",
+      "sha256": "60af613754ac922104fd8584b4ea0a2c811f5c9c58f063924f82e2fef75bf549"
+    },
+    {
+      "id": "da-e21365dca983",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-e21365dca983.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0254.JPG",
+      "sha256": "cf7e804bed8bdbce860557b86a09618b2f4d96379b18950a8a4b441b4b1e1eb1"
+    },
+    {
+      "id": "da-e57df9217020",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-e57df9217020.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0099.JPG",
+      "sha256": "82943ee0fdf3caa978503f943263edbe7a596f44b51763a30f2cb3d1393d8928"
+    },
+    {
+      "id": "da-e960311726ea",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-e960311726ea.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0766.JPG",
+      "sha256": "4d9fdf73faa770e27b71d78af350f17144bb1fcf0cc45672a36f4796dafe6077"
+    },
+    {
+      "id": "da-f24ecbfa0024",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-f24ecbfa0024.jpg",
+      "annotationSrc": "/dataset/annotations/da-f24ecbfa0024.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt",
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/020.JPG",
+      "sha256": "507f5689dc9abb7676b45975caa16682a838c72329543d306362a6b607300ec5"
+    },
+    {
+      "id": "da-f4ba253ce8ea",
+      "category": "pcb1",
+      "split": "calibration",
+      "imageSrc": "/dataset/images/da-f4ba253ce8ea.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0037.JPG",
+      "sha256": "6562faa71ce40a305544f96d962399788d258d1b6cbc13a0f64b2d536e01cfd6"
+    },
+    {
+      "id": "da-01141676492e",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-01141676492e.jpg",
+      "annotationSrc": "/dataset/annotations/da-01141676492e.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/032.JPG",
+      "sha256": "f16724ff931337350ea81ee3d396c3d79edc00e4832d15650b9b1e58773ed60b"
+    },
+    {
+      "id": "da-02553d693e22",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-02553d693e22.jpg",
+      "annotationSrc": "/dataset/annotations/da-02553d693e22.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Missing"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/046.JPG",
+      "sha256": "ab0c0ca42ec43bfff2021a24990cad1d211efe91926a77589cba74d7dca10dde"
+    },
+    {
+      "id": "da-09375596cd4d",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-09375596cd4d.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0618.JPG",
+      "sha256": "1164ea7f82ee8861a4e6e0c835766eb12f5e3dd9b480e31af20247c4499e5c90"
+    },
+    {
+      "id": "da-214a17b5f804",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-214a17b5f804.jpg",
+      "annotationSrc": "/dataset/annotations/da-214a17b5f804.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt",
+        "Missing"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/051.JPG",
+      "sha256": "9b1fb7f192171fbc146a842c631bd78df581db3be9c54c40f9d520270700ca29"
+    },
+    {
+      "id": "da-246393541cee",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-246393541cee.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0583.JPG",
+      "sha256": "c12d5bef3ac6c009281bc75ae3ac2dfb6dc4c24194bf53f078c22070455f8a5e"
+    },
+    {
+      "id": "da-373620a258dc",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-373620a258dc.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0093.JPG",
+      "sha256": "2546a2c96c17548fd56d0bc1fa04ccb12900d5a4de125eb1fc5cc4c53c0afe80"
+    },
+    {
+      "id": "da-3d5d5ab56508",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-3d5d5ab56508.jpg",
+      "annotationSrc": "/dataset/annotations/da-3d5d5ab56508.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/015.JPG",
+      "sha256": "264432e8134d5e4a6c634e20e06984118ba83efd5b1219bea0804d8ac061ac03"
+    },
+    {
+      "id": "da-4af8d9495aa1",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-4af8d9495aa1.jpg",
+      "annotationSrc": "/dataset/annotations/da-4af8d9495aa1.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt",
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/084.JPG",
+      "sha256": "608ac5bec6f4f4efef12bca72102dfe14d848ab9a960e8aae8d2d9bfaf51bd66"
+    },
+    {
+      "id": "da-4caae429f314",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-4caae429f314.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0650.JPG",
+      "sha256": "ed8817744731e148b8b307142d12eceaefcb9097b4edd2d2f6c779604bab44fe"
+    },
+    {
+      "id": "da-5113e062c407",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-5113e062c407.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0045.JPG",
+      "sha256": "6297a64cc9e72afa0f410179a15095c2ecc03bc0c2eb3f40f3d258bb42c6fec3"
+    },
+    {
+      "id": "da-5a5030c81789",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-5a5030c81789.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0538.JPG",
+      "sha256": "7e43b00348b6492ee58f3ba56af97d0481877c0001205fa34ccdd7c3514337ba"
+    },
+    {
+      "id": "da-5e253d9bfc92",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-5e253d9bfc92.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0160.JPG",
+      "sha256": "8fcb4207454c7d1beba02aa0c416f6ff54f67ee0c271078a21d51ff2034afd57"
+    },
+    {
+      "id": "da-79bcaf2c3ed2",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-79bcaf2c3ed2.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0241.JPG",
+      "sha256": "e1d9fef176635548568d13ba912dcf8ceb74e6af395a938971a4c659ecdb0e0a"
+    },
+    {
+      "id": "da-8bfb6ef1c32e",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-8bfb6ef1c32e.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0979.JPG",
+      "sha256": "98ff321cbc90fd6ac08514a0578b88d5df35f37b12d11d30daaf0d6b871f3298"
+    },
+    {
+      "id": "da-8fd7c1645232",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-8fd7c1645232.jpg",
+      "annotationSrc": "/dataset/annotations/da-8fd7c1645232.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/064.JPG",
+      "sha256": "909d57f447597b0f371f813bea5819a019563a30ac1eca4dc0f14665a7d405f6"
+    },
+    {
+      "id": "da-95d2b30a39a6",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-95d2b30a39a6.jpg",
+      "annotationSrc": "/dataset/annotations/da-95d2b30a39a6.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/093.JPG",
+      "sha256": "e5d0b62cdd5f2c39e1f8a1bf09b319cb758a5a59c7381acb00dd0e1120d3eb9e"
+    },
+    {
+      "id": "da-9679ce569d7e",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-9679ce569d7e.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0631.JPG",
+      "sha256": "8b79ce1acd9de892f546f7fec59555b7bef609b9ef8b729457dcdfbf6e7cf2a2"
+    },
+    {
+      "id": "da-9fb86cf5cebc",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-9fb86cf5cebc.jpg",
+      "annotationSrc": "/dataset/annotations/da-9fb86cf5cebc.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/037.JPG",
+      "sha256": "7b4163663cf5175e5f8c3067a72d0fe72a19e63512734ef98cb663c4f1b486bc"
+    },
+    {
+      "id": "da-b66c9338b033",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-b66c9338b033.jpg",
+      "annotationSrc": "/dataset/annotations/da-b66c9338b033.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt",
+        "Scratch"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/069.JPG",
+      "sha256": "2ff8d327d5125f2a906a704035afd3c0656dc7ed22df181917a0feed8e72a425"
+    },
+    {
+      "id": "da-bcdd07896358",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-bcdd07896358.jpg",
+      "annotationSrc": "/dataset/annotations/da-bcdd07896358.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/075.JPG",
+      "sha256": "5025690088ab2722a01a4f6c2f776dd46bb271dace5bdd062fba28e9ed58b58c"
+    },
+    {
+      "id": "da-d1a7098ddf6e",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-d1a7098ddf6e.jpg",
+      "annotationSrc": "/dataset/annotations/da-d1a7098ddf6e.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Melt"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/065.JPG",
+      "sha256": "91eaf94cb170bda60354a7b85b9b828c51a58e69db4ac47d781665f01e0133fe"
+    },
+    {
+      "id": "da-d7ffa34112a5",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-d7ffa34112a5.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0115.JPG",
+      "sha256": "824f49b825ae327f2ef01e1459c1f58eac2a0b48c78b515098a1ab1cc54a4397"
+    },
+    {
+      "id": "da-dad3a98373d1",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-dad3a98373d1.jpg",
+      "annotationSrc": null,
+      "truth": "normal",
+      "defectLabels": [],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Normal/0922.JPG",
+      "sha256": "3062c260bc5b0bf81a0ff3064fd5401ab2e2fbd574c0d9955fbbf0788ced8b1b"
+    },
+    {
+      "id": "da-e97b7d92470e",
+      "category": "pcb1",
+      "split": "holdout",
+      "imageSrc": "/dataset/images/da-e97b7d92470e.jpg",
+      "annotationSrc": "/dataset/annotations/da-e97b7d92470e.png",
+      "truth": "anomaly",
+      "defectLabels": [
+        "Bent"
+      ],
+      "width": 768,
+      "height": 585,
+      "sourcePath": "pcb1/Data/Images/Anomaly/011.JPG",
+      "sha256": "b293beeb60e725b8bc838494fc62f09232a25f9caf2c76c10ff3eb61fcd88bb8"
+    }
+  ],
+  "provenance": [
+    {
+      "sampleId": "da-3e29a6451667",
+      "originalSha256": "ca87fd4dc2cffc6347ecdcfa7bda2ee8e05c1499a2d2d5c64926d0bfb25af4e3",
+      "processedSha256": "e8f84a75b5d802f5a25abb04d64cf31dc9ee4fe756e63ecfdbf3d903ac51e179",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-4913a3b71dd1",
+      "originalSha256": "2406a0cf37bb161a5096232bc033db7e96fa0329d145210b3231b8c5a885e2a2",
+      "processedSha256": "4f19a793379c1c568f02a0e573c1d205629abb73dfcb4a8761a566ab116ddf87",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-c3d187311d59",
+      "originalSha256": "6ad3659c88745d6a2b3996c306a22b5e6819918fd7e4e514e2d25072b53e6d5f",
+      "processedSha256": "0075ce1e7ea5b0ccaaeab85ca9d52ff79d9355d0cbe9fdb1e2cc230087e43ab3",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-cd1c6ff812a7",
+      "originalSha256": "e6015351e061b8bfc1172df37050ddcb778fd106074bb7203638c1aaf41ead1d",
+      "processedSha256": "4a452a966b563f7836a4016719ae399597804a117ddd97d9eeefc880d139489e",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-058d10c61b87",
+      "originalSha256": "af2a4751400c5a8be7e970130590a37c0e4bacb46c64af388c744644663d47f2",
+      "processedSha256": "fb6de0be64efc12b5061ed5012a6bd7383b0d6a14a0f0f0b55a7d16f073e7dbe",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/077.png",
+        "originalSha256": "cb3d1192bec5c6e867363855e8d393c09c2d503aa18ae303b6b3ba51fd2224a5",
+        "processedSha256": "052e6c15e4d46f5a876a4ab397e7ff6620104fae481bba46ac43e5dc193e424e",
+        "classIds": [
+          6
+        ]
+      }
+    },
+    {
+      "sampleId": "da-069c55367457",
+      "originalSha256": "84c8cceec073e522f82bfa906de34cf62ab288d8ab393680e10082fc1efe3d7d",
+      "processedSha256": "97463ad0e993d334b4f778a4f8fabdecfe5c37bb2e87c8bf0c8e6cb52860dcaf",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-17288c4804ec",
+      "originalSha256": "1c7ddf55bac958bb41ef1a29f907490ef0c40012a107c654722712659576791d",
+      "processedSha256": "05b5fa5c449e4d12fed6e2fd14c306b8cc128b4689ebc20a050d03ae0df2b441",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-3df862aa162d",
+      "originalSha256": "c8ffe2f9160a3fc4f6a4c327af14ccd1c2e21c3d9ced0d96444ce1b48cf8e617",
+      "processedSha256": "7ee17e423a0defe076a5573939bf629a0598f44025bdce34532f89f80fffe79b",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-7dc2af3b7844",
+      "originalSha256": "11b12847b781f2c5d5ab2e11a685caf4c8f26ec4f5b844f98ba6dc237f1695f7",
+      "processedSha256": "9f585bb7d2b81ba09d6162e55bfb409055e18c96b678a761ff50116598d1c8a1",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-8c4dfcbd2b32",
+      "originalSha256": "8da95f3453f8865d5bb48d532d3780d8d60f3b7b40df4a436ee2fd60e1144987",
+      "processedSha256": "65c197588efa4c09f5422001a0d39504f6533048be83d00b3026cfe6e0c5ae89",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/083.png",
+        "originalSha256": "68d75d1de7f3505b5543b2bc5d3015ca844a84036977fed2e7e4e2dc992bf8db",
+        "processedSha256": "0932fde3bb5a33cee6cdf35680fc3cfd20c1fd7577b2499d8fc8cb1bafe3c108",
+        "classIds": [
+          6
+        ]
+      }
+    },
+    {
+      "sampleId": "da-942ac782beed",
+      "originalSha256": "b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+      "processedSha256": "65406f4f2776fe61d2743180deff4ed4e1ff0ff5447b3d1f61bff68634748d8e",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/012.png",
+        "originalSha256": "93b28dcbcedf934e037b7bfbbcf2c5d6d2ba1d1a5fcb7d3a4a982bb30a7ac7fe",
+        "processedSha256": "19e543303069522e97ca9de4601a9bd39d08607a9d89d2362be513848037e740",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-977d78b66161",
+      "originalSha256": "47b2dcf3bf13f43d34e479f5f04231c2daed13f9c5a52dac53ab09dcb7bfd0d4",
+      "processedSha256": "f63874316d051b5527d961ae358d5d4d7d2ee47a4d52fd6c7213e924d469a6a7",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-9b2905a27296",
+      "originalSha256": "e2c7b688764a93f9fd6e9f12744bbb0a4f9669ce15c5494540286619f49f9d68",
+      "processedSha256": "27a35695534d8c9ee8ea8af62b5c5a2d17d620c4fa46d3e9c1cbc1109b730b41",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/035.png",
+        "originalSha256": "0878a794748f76b4e9cceae61e8d7283d015bc9402868498fe4d4f4ebadc9771",
+        "processedSha256": "65afa702aca727f7adc5970e7de23c9cfa44c0309667014411f422431288a74c",
+        "classIds": [
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-a5d0301b31db",
+      "originalSha256": "f42cb90134eb0a2a36f37bd96c033ceb869a9dbf303f007e253de0c948e69d91",
+      "processedSha256": "2d7b35ff441e70b157cda6789c2d0aab57c6e8810238c92495ee358062709ba6",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/028.png",
+        "originalSha256": "f0ff3323a6bb804f42d1d81507154a92fbb33faa1e744b17b887f05c6ca17afb",
+        "processedSha256": "0a6aee946f18536c2c79ad0c4a5782d6626a06944cee421598ab8742433adb3e",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-ad418ab4fa88",
+      "originalSha256": "6f4f1f3776e7d144896e633d2eaae3adcfb3647e1d967b19d6e90f6c2ade809e",
+      "processedSha256": "bb78970173cf4822f8acf334d9899b0ad663c4931b27cafeaa434fddcfebfb40",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-c08025a49e34",
+      "originalSha256": "fcd0e8a6c699d3bb882bbdf58c806bb5383566ff4b00eec04e57d4fe487628ab",
+      "processedSha256": "f84c2197a4b644e799f04fa829c0819ed5e43c3d73bef7b1ae434faf577ad4fe",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-d1e0a8d8e29f",
+      "originalSha256": "4c5a9cef1b12ee2489b1276c9048b6afa7ed5437427c991d8cd3b42ffcd4e126",
+      "processedSha256": "e38218c53e57994d8c9ecde515f675ca754cfdfbc4d0d546ce653736d12f7a0c",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/099.png",
+        "originalSha256": "053952ba195638cba1ae646bbb200037630a6bf273f15c21e887b483fb3d4918",
+        "processedSha256": "555f2770b8f33ecf20d4c0e4f0369ee266424f70b12639d2896ecf432165b2c4",
+        "classIds": [
+          7
+        ]
+      }
+    },
+    {
+      "sampleId": "da-d2fcb2b7359c",
+      "originalSha256": "4fb6f1db3f34fddc6f394f15939cee8742c4e84892f26247b019f89e0cc35984",
+      "processedSha256": "d2680193d7238a66cc58f61c6e10dece543b9bbbd380ecc48fd4f5d5818899ce",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/023.png",
+        "originalSha256": "0d0fca0ea43d046ea51e9ba90dbf2a97768e36ba39d064ce9f191a1d0222c9f8",
+        "processedSha256": "dd87e8c72ae14bdb29f6c3131b9273645c0b1fff5898aa7cb1cb8eebda5e2bd9",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-d94b1af71d66",
+      "originalSha256": "3d43f6a82ddb15a810ce577278d2cb65ec7bf297e2b16aeef826e08679601f84",
+      "processedSha256": "19bfa072fe1d35750c47eef22511a14399f62c141cafb4eda8293885b95aadf7",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-fe0132e83cec",
+      "originalSha256": "888cc1ea92637bf0e46d2ee3f31d7e89fa874012123538b8bb6f2fd8303c106e",
+      "processedSha256": "27eaa635c6a84640ab4d153529bba403495714e16a78deebc484433d5fd36ce8",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/062.png",
+        "originalSha256": "8497bdd5442ad8b13920e86d1adb3d90f8d72747b38f5090edce84f4f09b9d7a",
+        "processedSha256": "e78c95f2eee9d095e466c627e149d0cf2fe440945202df3a19f4b1e62ef54a42",
+        "classIds": [
+          5
+        ]
+      }
+    },
+    {
+      "sampleId": "da-04d46e9f09c3",
+      "originalSha256": "075ffc74db51c92820970a612c5d3dddb4aff8570837242469ac3745245c7c60",
+      "processedSha256": "473b00fbf91251fadca34ccaaec2b4d88bf176f1e4776a962953815d4950509b",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-0ed8242d0380",
+      "originalSha256": "e3afd9ab42c58c55d734f543578e95d12dc641ca2d4cf7522a6cc1eff5858c28",
+      "processedSha256": "0eaaf609db3512f428ca7742ca5bb4d680182696e8cb58d4627c175560c121d0",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-1a96358aec83",
+      "originalSha256": "0ad29c55435c769b044219242dde30a155782cbd26ca81a3cb7a8d1abb5fa7f5",
+      "processedSha256": "88fdfcfdfb1ccc172e26adc74394efffd0228c3ead192f3bb2927cd67b2df87d",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-1d2d604078fa",
+      "originalSha256": "47f831dfc0c289cad4efb35e7f4bff5eb28fd1dcd7b6b0fceb99c16c05fd4562",
+      "processedSha256": "9b23a04a0b2709618f466d7d80ae4f88fc205ff7bc7d76cf096b04476575c24b",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-1f6a4aa94058",
+      "originalSha256": "a6042c62da5de123b2bf39193d671d8af9decd6d8baf520431df36052d8e66a5",
+      "processedSha256": "982853830ce4e858073e2901b6995a9eb4c31c52298e68e10f9bc6b6d4437363",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/095.png",
+        "originalSha256": "91a2437ca9ed0a6643b33a24ec43b4c0c295d74b4849715107ca8efba5c47ca2",
+        "processedSha256": "c95a1839aa9a5046e8dfe06d2467e48d4e18a63474845182f92a93b096d18c8e",
+        "classIds": [
+          7
+        ]
+      }
+    },
+    {
+      "sampleId": "da-2dbdf7ab9b07",
+      "originalSha256": "5b9404e67e0390ce0c1ad780159e5ba6825abcda9a2d2a91c2adb1bfb44c83ca",
+      "processedSha256": "cc593d76db22f7a059ca5862cfc02358b9da6b0a689745aca466eec04d7f23ae",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-432effea482e",
+      "originalSha256": "7001b2b9d7d67ba54a908ff14b989dc2ab3a7f8ab020bfabad0b7c77827b9706",
+      "processedSha256": "e1df5993a96654e1d9a9e5ebc316e8183a836d922358c518e35367ad7ddf10ae",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/010.png",
+        "originalSha256": "056fdda48c9e99ca26bb50bd0d3c693d523cb5c19ce5ea79b4ce89d124da6667",
+        "processedSha256": "5733a4729ab974b4e507ddc633f3abc43e1101ccc731447c45ee7c3d2fd8e41e",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-491324b17422",
+      "originalSha256": "e896d6622fbb8f733594c40f2dedc29c048627c6d4523e5bcbff927266854f61",
+      "processedSha256": "e6980f2fef3f6dd3e55bd8f9f27115171ef36bca272d6d1f78eece46f6ce23e9",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-51fa1721f706",
+      "originalSha256": "5c8fef83f6ea25d8659789cf2ffc5c3b17eaa7b8a0a8222e1b6a68682d67ff80",
+      "processedSha256": "10d5c465b83a967db743785be5b4ad109e5beb37dff4d9abe3f37759f25b7dd6",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-6e615b957b1b",
+      "originalSha256": "623d49d0145cc23afcd36e990296440557fa3170cd11e76d05914c57b6d4ef2e",
+      "processedSha256": "7c546d74bf2ac2a78b6a2e4aaa2c68a5841db9f24a16a441641a1b00f0b5b41d",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/088.png",
+        "originalSha256": "f1aaabc7e3a637c6967e5ef759dff83355d3982f25b657c92045280a984430f3",
+        "processedSha256": "118c1c4689afd44655a52c620a9f573c6b0a0401fd4adbd3d2ff04ce05e95db2",
+        "classIds": [
+          7
+        ]
+      }
+    },
+    {
+      "sampleId": "da-72c399382388",
+      "originalSha256": "02843fc7741551e2619c432f0996841050d91013d0212f70ee1eb9d22f66dea6",
+      "processedSha256": "ceac125303e78a8cf82f75468a9ad31644b18c3d5f6d37381cab840bda12ea77",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/049.png",
+        "originalSha256": "11caa78d2d74a9c2c55ecd8e9fa8cec3d95738d3b290805cf4f36a86e6704747",
+        "processedSha256": "4353e36c9078e7d1c196f781a9bdc43a21ade9daa9c4924e49805bbc4e9c3bb9",
+        "classIds": [
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-75f790acc716",
+      "originalSha256": "a015ce85aa10281bccc26b963c9400aef6882ad92dec2db5d934e79c1a1e44d8",
+      "processedSha256": "aa036f06cfd96167869f865abb328410d263b4e66b4b32af93c04783f44de696",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/009.png",
+        "originalSha256": "7fb327dfb2f87a461e5954a6505e398910765c746ee9c03431a6496e75347603",
+        "processedSha256": "33b09cdce53f2b00003c72cf4bab26aa3391b4e8e2ed4d25f93169955c06351f",
+        "classIds": [
+          1
+        ]
+      }
+    },
+    {
+      "sampleId": "da-7d5d538cbb67",
+      "originalSha256": "ebf963283f39dac4b2b1982d45692214315e2fb200c44a2e7c47e22e78fcabe1",
+      "processedSha256": "4fff709500016bc4c05bf4808433bae27778d2503311b439c4bd89428d51f9e4",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/060.png",
+        "originalSha256": "3c8fa5ec418d47a38e56e6eef416e94eed6aae9614255bd2406a5433dc5147ee",
+        "processedSha256": "e9641f9c178e79c9be27cc7bdd79869b6f6afaef05bf046fd95be4c0fe109a63",
+        "classIds": [
+          5
+        ]
+      }
+    },
+    {
+      "sampleId": "da-839e732f91cf",
+      "originalSha256": "fd8588391603a3189beac07aa2b29b771657f02d9de4f5d412dc5d89dadbb9d4",
+      "processedSha256": "10242a5347fb672f142216eb0c72434e51b00254ade2ab0d6fd586fe174e0b80",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/068.png",
+        "originalSha256": "c6f60ffa0bf575063131cc3cd82de74d4092cc1f96eb322fda2dde004ca64825",
+        "processedSha256": "c798f0453c50e301e37c093a45efbc3791bada8a22e7b8689bb4a182dae3479f",
+        "classIds": [
+          5
+        ]
+      }
+    },
+    {
+      "sampleId": "da-85697cadd5eb",
+      "originalSha256": "b8540a2744b0ec80ddbcb186ee3fe1a89c5da05dc635ae524a0173fa585f1bdb",
+      "processedSha256": "91b0f6dd5097622ab25a9b5d57b2c24bc4aaf7e5b0f2c2ba0c1da71300d1f5f5",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-8f11e6da80d9",
+      "originalSha256": "96f29c4abee91989a1e88c9b970fec17e02acb1e51b890567b038c72891f87e7",
+      "processedSha256": "ad62fc01bc9f74a8193deabf5ef33b98769ad8fda7c04a2e2735064df32f8b57",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-9da7314b993e",
+      "originalSha256": "175456ae355690eff5fc07082b3db20d9e05dcb3456783806d77c72c446f8df2",
+      "processedSha256": "d82cd3d16377abc634e5599d09f60fe436eb29e9a1b3cc038e01682fd0d96e43",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/048.png",
+        "originalSha256": "bdb10b8929a6ee29efe666dc36f3724b04d14ccdf265e04608d858bae54b4503",
+        "processedSha256": "c54f8d6360d05eb4cfbebeae7154c462386f1f8ef91358046fd9096d02913c6c",
+        "classIds": [
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-a9c5284e59ee",
+      "originalSha256": "00a89c587f366dfd0a2c751c62df7bed955743afdeeb7f4cf3b8f9a062fc0359",
+      "processedSha256": "869bd220a3b164cda5663d43d5e4e463b923ff620f357947925b9810437436a6",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/016.png",
+        "originalSha256": "975b778af71b1ab01af15dae5f4042a3bf3f494ab5a5b57963bf5743e89595b5",
+        "processedSha256": "aa82c3e3d5884d54ea7b8a936a48a6bc6a8ff5cca42dc9084d835cffc1fdf15c",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-b31ae058b8f3",
+      "originalSha256": "2f7c1bc64e4f849d1d884b8a77c80dfee6d277424b99637a5e31d6f45ecd88cd",
+      "processedSha256": "6a68c2cd7f40b208d0ee606ebe61ba337b4b2e19cc105c5e8cc29b2ddc8b3619",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/031.png",
+        "originalSha256": "a318c2ea6aa43b7c4041b3bde599745cc5688332d2e35b4de75945fda5f9f29e",
+        "processedSha256": "6086b1f925f9e96f8b3494e35c07a4acbadbca822c135d2f9133402c935985be",
+        "classIds": [
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-ce40cc7250c9",
+      "originalSha256": "f8010153814b5f3e6244c06e6cb8b3fb4ff609068f9d23c72e0cf5eb13b97506",
+      "processedSha256": "27351cae03856cd1b094e487056cefd7d0efd3d0d05fbc901dd5376ac3133d33",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-d10413cbcd72",
+      "originalSha256": "430bdcb125f0b02ed54fc2a6c4d9a05448499227073abcf137fdf3c947d26944",
+      "processedSha256": "db7a890ff24f278c6375d86e608e9da35a991b653b58c9bac3ab8fad5dbce8a4",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-d70db114fd92",
+      "originalSha256": "faa75a0ac00d3b330b4fc738d45ae6841ffff86593bf57d29feed4d3a8736ade",
+      "processedSha256": "efe3aebffbc1502b4ff9526300405bb2b98fb20500fcb6dc9a317e17160f23ff",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-e66bb8cd00f4",
+      "originalSha256": "e3769b8894c1a6fff87472ae7294d4b2a19a91915b066f1e488642b7e7e48283",
+      "processedSha256": "283b8d19c7bc79e41bad9dc798277fdf9426a5187cae30cbb8759c11d58e1377",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/094.png",
+        "originalSha256": "fdc5e5f42557545e2aaea90554f12d9503102bae1d83ce78ad3b218c3d61b845",
+        "processedSha256": "4994938224ecaaa003d80b61f74c39560891c8a91bc680855f4860e644dd610e",
+        "classIds": [
+          7
+        ]
+      }
+    },
+    {
+      "sampleId": "da-ed96819a459d",
+      "originalSha256": "6c48743e09af766c5693ae27c8c4ac07a877cb43fd5f0e63321eba3d10bf762a",
+      "processedSha256": "8e6af3da5c41d2b8ea97143c7e77fa67acaa516f76db8156cb7779c963738181",
+      "originalWidth": 1284,
+      "originalHeight": 1168,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "candle/Data/Masks/Anomaly/027.png",
+        "originalSha256": "bd05adc0c06b4f4bb43c6838a4f69e653d106af5440bd82a2f458eb8baaa1577",
+        "processedSha256": "81b2c3b70e14b30806fc70495566db4a28ba827d081c21c9a877065f370376c7",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-111aa7e65859",
+      "originalSha256": "39b3aa8af6e5b5e9d1c8f72b5809004d36cf7715f7b716f3cb3f4b34d1326243",
+      "processedSha256": "6a9c181e41d6374679c257d35076bf63feab63f0ea838a1f586f89cca4dccb52",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-12df1c152210",
+      "originalSha256": "84543bf9414e9d3a6e703273696b78b4624b6ead48a24f34a654f31725affd49",
+      "processedSha256": "ed1365faa1aea78128026d052c6bb20ba40c0512684507a592d2a2fc80113e3c",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-1ff7bd5a2f22",
+      "originalSha256": "ca99d6e0e4b0e68069614656d7f559526d2a85d77439d3370df684b2769bbaf0",
+      "processedSha256": "e63f049ff995f7af8ab82b4035fe3482b964167e5b3b256407f8cc083be15bf8",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-6bd4123152dd",
+      "originalSha256": "d9cb4e76b1de1156265f68e11e6ccf53ca51e46a3c4b8bdc31ae3a48e66f0101",
+      "processedSha256": "9abe5ce37319a5bcbeb2eb434e123b9f4ef88b7fcc41fb1c3229eb1ba9f079f6",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-1bf7423cc1f3",
+      "originalSha256": "bd68671b9952ffbc1efcfe369b372af91cff1b9c81ae9ba187f34f8b0bd880bf",
+      "processedSha256": "2c2f80059e3163dbc259465c731d016a16204d5a08ebbb5cd46620c6f3312246",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-36bf7a7c89f0",
+      "originalSha256": "733c324c3b5918cfeaf4e4ec280886539aed18149184a93e037e834078617508",
+      "processedSha256": "73e18f1020ff3e72c417280c167f26e2a2f94d8da1576bf07615f44f20650ca2",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/048.png",
+        "originalSha256": "02a2d4032dcecc12e7e6c3ee539bf3f4edbceca17b9d954a5085ae1e874e4472",
+        "processedSha256": "4a1a2f497c398d4c2d968744d7a3242d821d1c79f77fcf2d81979e3c21ded356",
+        "classIds": [
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-3ac07665faec",
+      "originalSha256": "ffaa6bb1f99e963b10201b9ecb0609302b52d19317a833d562d7d9ca94a9cf7b",
+      "processedSha256": "0f96c134dd19c866a0e76636ab2045c43227f869d43974b6f33a8136f01bc052",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-4547c74ead45",
+      "originalSha256": "af372794bd4ed8300dc342843bf3922f842f92f53122c1cb5d821f57b23039ef",
+      "processedSha256": "17f4d91a885015ed72b34a5d48b9ee8158284b51e8d475e121ac6cf7209531c9",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/085.png",
+        "originalSha256": "88d64507cec466cb694fd7e954d08135a4c5491f8a201b5a4b44b8f09fb43de9",
+        "processedSha256": "ff6e3a28d3c203a1cdce043731d54614d89bd713906a4b98f115e58a720d4f3e",
+        "classIds": [
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-63dd5daf2c4f",
+      "originalSha256": "4a547d79fee844759b73d4b5dceaecec31899a0771ff6e3f2c4c48dde175c7d9",
+      "processedSha256": "472afe390d79eb5a6da559f42f02225ae0989e07b059679d7a477ace73438801",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/018.png",
+        "originalSha256": "4883a72a79bea9e707bff9c9711d9fbd2f7c7ef8a60c035bb7a9f171d6851146",
+        "processedSha256": "edef81ad1cf3824eb5ade843727494019aef3fb913b30097249b6376ca614781",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-6886e279c1fe",
+      "originalSha256": "f2c672946729be8bc2ab5aeb0e9c3a0f5e126b7dac16a5f54c0a37e736282bf0",
+      "processedSha256": "70034ec3667757b14e4d05a4945fd758d578453f386a18f90bd474725f7d9ea6",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/073.png",
+        "originalSha256": "78d36eace685a622f870c7e7311fbf160c823efddad620feaa738a8093233a24",
+        "processedSha256": "3c21b469776ca28d2b6387be2e350f6487324400ce2660a67906c9ecb9217718",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-6deded9403be",
+      "originalSha256": "6e80a211897db96f52e55a2582332d10161038088bb6f770afe43ca56f7d865e",
+      "processedSha256": "5c88ecd03ea7b4ab765d345748587b9ddee67c20a6c0a3d1a1cf4cb7bc12fd72",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/095.png",
+        "originalSha256": "13f35aa143612d0e5b601e07fdb4ad0823ecb24bb282b61f367b97c173735fb9",
+        "processedSha256": "9bd47e229a2e47894e93eed241f2996988fc7c0bda1e8ff98feb84eb4e5b84c1",
+        "classIds": [
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-7550b73a0061",
+      "originalSha256": "cd1b5cdb7e8bd8a194164101bff94ecc3d17d86e1eb452361fdca76729ddd4dc",
+      "processedSha256": "64cfeaa67af2e51bf99636b8efabc9828bc43ac45d42f4a1e7be25e0c374b451",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/057.png",
+        "originalSha256": "290787b07d136aab16a75a2c32966746571f8cc98aac86eeef9d67b3717ff215",
+        "processedSha256": "475841bea7782132c7d0932b32e57ce202e989483206b413079fbf8901b380a8",
+        "classIds": [
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-78daa92f0ce9",
+      "originalSha256": "45df6a300ce0e5d3444c55a127cf7f171ca97a550b573541878939379014c5bd",
+      "processedSha256": "79e083753b3b23fbd24fd3fbb49b6dab4503d845c7c9bbeb80db03fddf004ff6",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/066.png",
+        "originalSha256": "6e2be8fc62072f46bcf3e233479c8128dacd8de4c144ffada2ab0b77222b210a",
+        "processedSha256": "4d1e875d6f8b1faf8e9191ffad7be50ec799bb36a3eeb1e37e0dbe4e60c498f8",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-7a497d97fe8d",
+      "originalSha256": "368cafb154a2790f962f357566f73cb55e7a61bfbef743fe9224764c2958cd15",
+      "processedSha256": "242c4a9bce89e45ff4aeec190a7de9ac93470976c3257a2afbe14002bbec7b20",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-9376aeb2a043",
+      "originalSha256": "9a8186454a1ddda3c50744e0c621a605e6801d3b34b7c323e557fc4309f6051e",
+      "processedSha256": "60af613754ac922104fd8584b4ea0a2c811f5c9c58f063924f82e2fef75bf549",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-e21365dca983",
+      "originalSha256": "767cdae1df65c6bc46ed7ec3f8198a3defc081c06d18afb57e7aeaf5e6a58ff1",
+      "processedSha256": "cf7e804bed8bdbce860557b86a09618b2f4d96379b18950a8a4b441b4b1e1eb1",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-e57df9217020",
+      "originalSha256": "f16d27102235a1a42fdfbba5f2663765aea352d271c7a167a7cdfef73c69e210",
+      "processedSha256": "82943ee0fdf3caa978503f943263edbe7a596f44b51763a30f2cb3d1393d8928",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-e960311726ea",
+      "originalSha256": "b28f1016c9b6bed3cd21bcad66c96fce6a0c6977bc11b796544268b983f6eeb5",
+      "processedSha256": "4d9fdf73faa770e27b71d78af350f17144bb1fcf0cc45672a36f4796dafe6077",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-f24ecbfa0024",
+      "originalSha256": "4918219c1719e3dacd8a7cb62b613b5125bcb22ea8a5c3aa516261b1ff484aeb",
+      "processedSha256": "507f5689dc9abb7676b45975caa16682a838c72329543d306362a6b607300ec5",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/020.png",
+        "originalSha256": "84b906a29bb8707cb14cd743725e94ceceb1e1a93d8f0aec94283b37ed791d78",
+        "processedSha256": "269291bc6219611ced12d08ae113cedf3ac3faaf2fb6ac46cfafb78b3450caf8",
+        "classIds": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-f4ba253ce8ea",
+      "originalSha256": "e3611ea60bec6daffd501f057d2367f598bc4defb763b88a708db31a12bcbc20",
+      "processedSha256": "6562faa71ce40a305544f96d962399788d258d1b6cbc13a0f64b2d536e01cfd6",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-01141676492e",
+      "originalSha256": "25892cdc117ba887a921533d7e8057bbd52f68b74de484542851e70b60a789cb",
+      "processedSha256": "f16724ff931337350ea81ee3d396c3d79edc00e4832d15650b9b1e58773ed60b",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/032.png",
+        "originalSha256": "b5365250013559b8a1ddd86c2a2f44c94b712fa474a76b8a399afa67d8a4afbf",
+        "processedSha256": "59b154e3c9252d2f51cfb11414fa5d2673ed5190410ef375d2f3adf0610d0c2a",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-02553d693e22",
+      "originalSha256": "903f3e5f6ec4f5fbcd4f2472f688356ac6709bd2dd7e91237ce8c8ee32b528a7",
+      "processedSha256": "ab0c0ca42ec43bfff2021a24990cad1d211efe91926a77589cba74d7dca10dde",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/046.png",
+        "originalSha256": "46d677ee5d349df1b429b190e35af61e1c575936b3de25b89ddca1a05ee3d4ba",
+        "processedSha256": "a450abf640e6c00b848716a3a3f1d8169a6ebd1aa5235eaecf5ebd6ca423cc44",
+        "classIds": [
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-09375596cd4d",
+      "originalSha256": "2c831a21c74ee3385d69e11dfbee70c960dea2b0369fe3c11444d9f6a7780d8d",
+      "processedSha256": "1164ea7f82ee8861a4e6e0c835766eb12f5e3dd9b480e31af20247c4499e5c90",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-214a17b5f804",
+      "originalSha256": "fefb62dfe5ab6946104009aeb94d1261bd9f0b34026a4a7cd14add7b053ec1ef",
+      "processedSha256": "9b1fb7f192171fbc146a842c631bd78df581db3be9c54c40f9d520270700ca29",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/051.png",
+        "originalSha256": "bc7720f3701abe5973da3d0aa87b2a298338e830da01a323bdfb00b0545df0d5",
+        "processedSha256": "4f8f8f5b40371a3a96bad9525e8ed34daa02754c99d5d931c21f3a92bae2238d",
+        "classIds": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "sampleId": "da-246393541cee",
+      "originalSha256": "799a274095aa0d358562cef0a0d93932a4c2f2ad6c3de096060fdcf61fa52ed6",
+      "processedSha256": "c12d5bef3ac6c009281bc75ae3ac2dfb6dc4c24194bf53f078c22070455f8a5e",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-373620a258dc",
+      "originalSha256": "b66367d277c6a532e2ba452ebd675a17805bc7b9d258e272156889067b376ce9",
+      "processedSha256": "2546a2c96c17548fd56d0bc1fa04ccb12900d5a4de125eb1fc5cc4c53c0afe80",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-3d5d5ab56508",
+      "originalSha256": "a5c044990118bd3fae4019c6df32e4b14cb7c81bb7da2deb44ce5b5c9cd49a94",
+      "processedSha256": "264432e8134d5e4a6c634e20e06984118ba83efd5b1219bea0804d8ac061ac03",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/015.png",
+        "originalSha256": "8c3ac38c731a85e5af7e7bcc4b5db09b464c9f1f8dc02c83e4f6d42fedc02328",
+        "processedSha256": "7785b6e2793bce3571adea19c64602b6f692cb844f8e9fceac09a8dfee6ac499",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-4af8d9495aa1",
+      "originalSha256": "6a8be28d02e63c3973905c59ac682b819ed61a7e08335c170cdeb27fb5161a74",
+      "processedSha256": "608ac5bec6f4f4efef12bca72102dfe14d848ab9a960e8aae8d2d9bfaf51bd66",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/084.png",
+        "originalSha256": "73f2f0635c0d6fc5d5b5275d6dc684bfff0a07cc34788da62477d34beb02c210",
+        "processedSha256": "fd04dbdbe0ba5b2a014c5088851c552d1ddfb7abfcfe5ece91d768788cdd3e9f",
+        "classIds": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-4caae429f314",
+      "originalSha256": "90d63484d72618a753fb3d878abdf3eaf960efddbbdc15d8752941b991338cc5",
+      "processedSha256": "ed8817744731e148b8b307142d12eceaefcb9097b4edd2d2f6c779604bab44fe",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-5113e062c407",
+      "originalSha256": "951523664a3867e6f5c3d29edce73c1528846e6ab6b7f4830da5b7550bed0312",
+      "processedSha256": "6297a64cc9e72afa0f410179a15095c2ecc03bc0c2eb3f40f3d258bb42c6fec3",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-5a5030c81789",
+      "originalSha256": "40edb38ad9eaa64d669eef9148392537e38f4e1bf3d1f1398ab0af921554f05d",
+      "processedSha256": "7e43b00348b6492ee58f3ba56af97d0481877c0001205fa34ccdd7c3514337ba",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-5e253d9bfc92",
+      "originalSha256": "73104d9ace1296108b9e2c9881e5e679ef9d60679c8392e7cd210d15424a3302",
+      "processedSha256": "8fcb4207454c7d1beba02aa0c416f6ff54f67ee0c271078a21d51ff2034afd57",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-79bcaf2c3ed2",
+      "originalSha256": "a0b161e53b5f13288f2f56dd0d67d4ed9b5b19ec186514c07b4c0f0415088aff",
+      "processedSha256": "e1d9fef176635548568d13ba912dcf8ceb74e6af395a938971a4c659ecdb0e0a",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-8bfb6ef1c32e",
+      "originalSha256": "333b527105081c4282f9a7d4805c826522782767d6355e62637ef2caa2599616",
+      "processedSha256": "98ff321cbc90fd6ac08514a0578b88d5df35f37b12d11d30daaf0d6b871f3298",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-8fd7c1645232",
+      "originalSha256": "74a56f1710244831c1c9c8ba2d4a2cdb0414ea483dca5f45ecdbff2351894ff1",
+      "processedSha256": "909d57f447597b0f371f813bea5819a019563a30ac1eca4dc0f14665a7d405f6",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/064.png",
+        "originalSha256": "a81affbcf011d77022909c2e8aed9f2a6d39d5345d0a624007c90f545ac9881b",
+        "processedSha256": "884b6da34f8d2d35249602a6f6a6377d76094f3c29aa2c1ce9e4577c9f75d31f",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-95d2b30a39a6",
+      "originalSha256": "86bdffe3218c56bdb4d4b12bb0cdf45633bb329713eaa6773d67aafbb1ae75d3",
+      "processedSha256": "e5d0b62cdd5f2c39e1f8a1bf09b319cb758a5a59c7381acb00dd0e1120d3eb9e",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/093.png",
+        "originalSha256": "34167b9fb0fa1c47bc89106486e544fb71b1bb8726597959653565e9de58952b",
+        "processedSha256": "98acbed77ee142dc3d4b9188ee202dd1add0fcd176e56369af80c971466730a2",
+        "classIds": [
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-9679ce569d7e",
+      "originalSha256": "69c8b1436b40a68d9dd0ab3cbb4ce641359d16dcdf8bdf8540e24b7a05fed139",
+      "processedSha256": "8b79ce1acd9de892f546f7fec59555b7bef609b9ef8b729457dcdfbf6e7cf2a2",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-9fb86cf5cebc",
+      "originalSha256": "fa2e269d8719dcbdf41598b72f9836de5413dc4ebffe9f419eb684a62a8aec56",
+      "processedSha256": "7b4163663cf5175e5f8c3067a72d0fe72a19e63512734ef98cb663c4f1b486bc",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/037.png",
+        "originalSha256": "75393bdd850f2ad7fde24ef5c1504e65b103163c0fbc6668d3284917d842007f",
+        "processedSha256": "d3c1790efe127b257d2aacda4724da019a834041e8e1dd41e258016ff8476bbf",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-b66c9338b033",
+      "originalSha256": "af5a7bceaef83ce034402e82568b874151d214caa8c811d2b946257d54947474",
+      "processedSha256": "2ff8d327d5125f2a906a704035afd3c0656dc7ed22df181917a0feed8e72a425",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/069.png",
+        "originalSha256": "178a07e6fcfa71dce24365139f582dd3d0a356383e4f80c5f4d52a8243e79baf",
+        "processedSha256": "b11581fb546b6ee72304b6d934a2a7d2426bc29a54f3b3318a01dbff6f6653fc",
+        "classIds": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "sampleId": "da-bcdd07896358",
+      "originalSha256": "0a85ad297d464dc303892f0c682e75ffb5f77e1d3df10fcf43787a35fcda8efb",
+      "processedSha256": "5025690088ab2722a01a4f6c2f776dd46bb271dace5bdd062fba28e9ed58b58c",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/075.png",
+        "originalSha256": "d4f9ee23d0ac39861719bd9efa10a562e6f988dc10cc2a0443ad9b700def82df",
+        "processedSha256": "a7b99dda5f25f5c05d34aada76670232b1f27bdede77866a7d409c8841d098fa",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-d1a7098ddf6e",
+      "originalSha256": "34e36bacabeda8ad3877a7ef206eb9370e6c4e0594e1ee8f9c2803cf93b46988",
+      "processedSha256": "91eaf94cb170bda60354a7b85b9b828c51a58e69db4ac47d781665f01e0133fe",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/065.png",
+        "originalSha256": "1a98a1141391d98d00e728798b5203dfc1cfd458a1bf341f560a9786f4987f26",
+        "processedSha256": "6f97a263ddf4c609ec9fbe630ff9f5ebc7f3a03518eba897295fbea8f1cd94b8",
+        "classIds": [
+          2
+        ]
+      }
+    },
+    {
+      "sampleId": "da-d7ffa34112a5",
+      "originalSha256": "da556dfaab047c385dcda4330d09e2c997d7513c445c327b7340200ef1ebab40",
+      "processedSha256": "824f49b825ae327f2ef01e1459c1f58eac2a0b48c78b515098a1ab1cc54a4397",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-dad3a98373d1",
+      "originalSha256": "6414e56c3a69c39cd7a08de38dc1cb7e381b315998c448b28b06ed6f26efd942",
+      "processedSha256": "3062c260bc5b0bf81a0ff3064fd5401ab2e2fbd574c0d9955fbbf0788ced8b1b",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "train",
+      "annotation": null
+    },
+    {
+      "sampleId": "da-e97b7d92470e",
+      "originalSha256": "8d93ed48b97868e200e6d7148b71681c5d87a1342ea7bc48bd05021b91470bea",
+      "processedSha256": "b293beeb60e725b8bc838494fc62f09232a25f9caf2c76c10ff3eb61fcd88bb8",
+      "originalWidth": 1404,
+      "originalHeight": 1070,
+      "originalDatasetSplit": "test",
+      "annotation": {
+        "sourcePath": "pcb1/Data/Masks/Anomaly/011.png",
+        "originalSha256": "db2019cc28ef665c6b9b6b891ea6b76fa9060f61921b1af5417788a191bb083d",
+        "processedSha256": "67c907061e1ba7a6ca987b6e0d26f6b2f9b1272798c39c308310b535c4001ec4",
+        "classIds": [
+          1
+        ]
+      }
+    }
+  ]
+}
