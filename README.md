@@ -51,6 +51,8 @@ npm run build
 
 Tests use local assets and provider mocks; they do not call the paid API. Rebuilding source assets is documented separately in [DATASET.md](docs/DATASET.md).
 
+The release passed 116 tests across five files, type checking and the production build. Hosted checks exercised live collection inspections, image uploads, category-mismatch review, review-history exports, consent withdrawal and endpoint protection. Desktop text was checked at 18 px or larger for primary content and 16 px for helper text. Mobile visual verification remains incomplete because the available viewport override did not take effect. See [validation evidence and limits](docs/VALIDATION.md#release-checkpoint).
+
 `scripts/capture-benchmark.ts` is a separate **paid** recording tool, not part of setup, tests or build. It uses a server-side credential, calls Decisions and writes `src/data/recorded-runs.json`. Review its scope and your spending allowance before executing it. It resumes existing results, checks policy fingerprints and preserves failed attempts rather than silently retrying them.
 
 ## Stack and boundaries

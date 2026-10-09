@@ -18,4 +18,16 @@ Full benchmark recording completed with 160 evaluated results across both polici
 
 At the default thresholds on the 48 selected holdout images, both policies routed 37 automatically and 11 to review. Appearance v1 missed eight source-labelled anomalies; reference v2 missed none and produced one false alarm. Category-level results differ: reference guidance increased human review for candles and reduced it for circuit boards. These observations describe this selected dataset and are not an industrial accuracy or safety guarantee. Exact denominators remain in the validation report.
 
-Final local and browser/deployment checks are in progress at this checkpoint. See [VALIDATION.md](VALIDATION.md) for verification status. The article remains a review draft; deployment does not imply permission to publish it.
+## 2026-10-09: Verification and public demo
+
+The implementation at [`0c7ec8ff884d69ed4591f2615adf5146d25184e5`](https://github.com/mspoli96-dev/defect-atlas/commit/0c7ec8ff884d69ed4591f2615adf5146d25184e5) is in the public repository. The [CI run](https://github.com/mspoli96-dev/defect-atlas/actions/runs/37884817373) succeeded. Local type checking, production build and all 116 tests across five files passed.
+
+The hosted demo completed fresh collection-image and upload inspections. Re-inspecting a reviewed image preserved the original review-result snapshot in the JSON export. Uploading a circuit-board photograph while selecting candles routed it to human review for a family mismatch. Withdrawing consent immediately after starting a batch stopped the visible workflow without later classifying additional photos in the UI; this is not a claim that an already sent provider request was cancelled or refunded.
+
+Separate endpoint probes observed configuration availability, signed visitor issuance, rejection without BotID proof, malformed-input rejection and an edge rate-limit response. None of those probes was admitted to paid inference. Exact observations and their limits are retained in [VALIDATION.md](VALIDATION.md).
+
+Desktop review checked large primary and helper text. Mobile visual verification remains incomplete: the browser viewport override did not take effect, so no mobile pass is claimed. Responsive layouts remain implemented for subsequent device review.
+
+The dataset documentation now explicitly distinguishes served-image processing from server re-encoding for inference. The pipeline and recorded benchmark were not changed by that clarification.
+
+The complete native LinkedIn draft, cover and links were reviewed in the editor preview. The article remains unpublished for Martin's review; deployment does not imply permission to publish it.

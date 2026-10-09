@@ -65,6 +65,24 @@ Zero observed misses in this selection is not zero risk. Reference v2 still sent
 
 ## Release checkpoint
 
-Final local checks and hosted browser QA remain pending in this checkpoint. No accuracy or latency claim is inferred from completion of the recording.
+Implementation revision: [`0c7ec8ff884d69ed4591f2615adf5146d25184e5`](https://github.com/mspoli96-dev/defect-atlas/commit/0c7ec8ff884d69ed4591f2615adf5146d25184e5). The repository is public. Its [GitHub Actions run](https://github.com/mspoli96-dev/defect-atlas/actions/runs/37884817373) succeeded. Local verification passed 116 tests across five files, type checking and the production build.
 
-The LinkedIn article is a draft for review. Article publication is a separate action and is not established by deployment or a repository release.
+The following checks used the [hosted demo](https://webytex-defect-atlas.vercel.app/), rather than treating deployment readiness as proof of working inference:
+
+| Check | Observed outcome |
+| --- | --- |
+| Live reference-guided candle inspection, repeated once | Both responses displayed anomaly probability 98%, usability 97%, candle-family confidence 100% and severity 2/3. |
+| Human label followed by re-inspection | An Anomaly review retained the original result snapshot. The downloaded JSON preserved that snapshot after a new result arrived. |
+| Consent withdrawn immediately after starting a three-photo batch | The stop notice appeared. Later UI state remained unchanged, with no additional photos displayed as classified. This does not establish provider-side cancellation or absence of charges for an already sent request. |
+| Uploaded public VisA circuit-board photograph, correct family selected | Displayed anomaly probability 3%, usability 99%, PCB-family confidence 100%, severity 0/3 and a Clear route. |
+| The same upload, candle family selected | The model identified a circuit board. The category mismatch produced Human review rather than an automatic clear or flag decision. |
+
+These are bounded functional checks, not an additional independent accuracy benchmark. The uploaded test photograph was public dataset material, not a client image. Displayed percentages are rounded UI observations.
+
+Public endpoint probes separately verified that configuration returned HTTP 200 with live availability and a signed visitor cookie. A valid inspection request without BotID proof returned 403. Ten malformed requests returned 400, followed by 429 at the twelfth POST in the probe sequence. None of those probes was admitted to the paid API. This verifies the observed rejection paths; it does not establish exhaustive bot resistance or test monthly allowance exhaustion.
+
+Desktop review confirmed primary text at 18 px or larger and helper text at 16 px. Responsive CSS is implemented, but mobile visual QA is **not verified**: requesting a 390-pixel viewport left the actual browser width at 1,265 pixels, including after reload and a new tab. The override was reset. No mobile layout, touch-device or cross-browser pass is claimed.
+
+Dataset documentation was clarified to distinguish the served JPEG assets from the server's additional normalization and JPEG re-encoding before inference. This documentation correction did not change the image pipeline or replace the recorded predictions.
+
+The native LinkedIn draft was checked with its complete three-section body, cover, dataset-license caption and demo, source and contact links. It remains unpublished for review. Article publication is a separate action and is not established by deployment or a repository release.
